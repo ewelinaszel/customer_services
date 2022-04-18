@@ -8,6 +8,7 @@
 
 #include <string>
 #include <ctime>
+#include "CustomerContainer.h"
 
 class Customer {
     std::string name;
@@ -25,6 +26,8 @@ public:
     tm getCreationDate() const;
 
     const std::string &getAddress() const;
+
+    friend class CustomerContainer;
 };
 
 #endif //CUSTOMER_SERVICES_CUSTOMER_H

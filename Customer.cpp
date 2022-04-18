@@ -3,7 +3,7 @@
 //
 
 #include "Customer.h"
-
+#include "CustomerContainer.h"
 
 Customer::Customer(const std::string &name, int vatIdentyficationNumber, const std::string &address)
         : name(name), VATIdentyficationNumber(vatIdentyficationNumber), address(address) {
@@ -26,3 +26,5 @@ tm Customer::getCreationDate() const {
 const std::string &Customer::getAddress() const {
     return address;
 }
+
+
