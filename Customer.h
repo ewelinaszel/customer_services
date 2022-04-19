@@ -8,20 +8,20 @@
 
 #include <string>
 #include <ctime>
-#include "CustomerContainer.h"
+//#include "CustomerContainer.h"
 
 class Customer {
     std::string name;
-    int VATIdentyficationNumber;
+    std::string VATIdentyficationNumber;
     tm creationDate;
     std::string address;
 
 public:
-    Customer(const std::string &name, int vatIdentyficationNumber, const std::string &address);
+    Customer(const std::string &name, std::string vatIdentyficationNumber, const std::string &address);
 
     const std::string &getName() const;
 
-    int getVatIdentyficationNumber() const;
+    const std::string &getVatIdentyficationNumber() const;
 
     tm getCreationDate() const;
 
@@ -29,5 +29,7 @@ public:
 
     friend class CustomerContainer;
 };
+
+std::ostream &operator<<(std::ostream &result, const Customer *customer);
 
 #endif //CUSTOMER_SERVICES_CUSTOMER_H

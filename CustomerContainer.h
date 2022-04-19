@@ -18,11 +18,16 @@ public:
 
     void addCustomer(Customer *customer);
 
-    void editCustomer(Customer *customer, std:: string name, int VATIdentyficationNumber, std::string address);
+    void editCustomer(Customer *customer, std:: string name, std::string VATIdentyficationNumber, std::string address);
 
     void deleteCustomer(Customer *customer);
 
     const std::vector<Customer *> &getCustomerList() const;
+
+    Customer* getCustomerAtIndex(int index) const;
+
+    bool repeats(Customer* customer);
+
 
 };
 
