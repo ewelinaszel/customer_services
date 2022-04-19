@@ -6,7 +6,7 @@ CustomerContainer customerContainer;
 
 void showMenu(){
     std::cout << "MENU" << std::endl;
-    std::cout << "[0]\tZakoncz" << std::endl;
+    std::cout << "[0]\tFinish" << std::endl;
     std::cout << "[1]\tList customers" << std::endl;
     std::cout << "[2]\tAdd customer" << std::endl;
     std::cout << "[3]\tEdit customer" << std::endl;
@@ -40,7 +40,7 @@ int main() {
         std::string VATIdentyficationNumber;
         Customer* customer;
 
-        std::cout << "Podaj numer:";
+        std::cout << "Select number: ";
         std::cin >> choice;
         switch (choice) {
             case 0:
@@ -85,6 +85,8 @@ int main() {
                 customer = selectCustomer();
                 customerContainer.deleteCustomer(customer);
                 break;
+            default:
+                std::cout<<"Given number is wrong. Select number from 0 to 4"<<std::endl;
         }
     }
 
